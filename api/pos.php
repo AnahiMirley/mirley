@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-session_start();
+require_once __DIR__ . '/backend/session_init.php';
 
 // Normalizar y validar la sesión de usuario para evitar TypeError
 $rawUsuario = $_SESSION['usuario_activo'] ?? null;

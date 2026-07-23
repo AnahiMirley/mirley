@@ -5,7 +5,7 @@ declare(strict_types=1);
 //Activar el reporte de errores
 ini_set('display_errors', '1');
 error_reporting(E_ALL);
-session_start();
+require_once __DIR__ . '/session_init.php';
 
 //Incluimos la conexión de la base de datos
 require_once 'conexion.php';
