@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if (isset($_SESSION['usuario_activo'])) {
+    header('Location: dashboard.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -226,6 +236,12 @@
         <div class="login-panel-form">
             <h3>Iniciar sesión</h3>
             <p class="subtitulo">Ingresa tus credenciales para acceder al sistema</p>
+
+            <?php if(isset($_GET['error'])): ?>
+                <div class="alert alert-danger py-2" role="alert">
+                   Usuario o contraseña incorrectos.
+                </div>
+            <?php endif; ?>
 
             <form method="POST" action="backend/procesar_login.php">
                 <div class="mb-3">
