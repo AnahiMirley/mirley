@@ -1,14 +1,15 @@
 {
   "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "api/backend/*.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "api/backend/includes/*.php": {
-      "runtime": "vercel-php@0.9.0"
-    }
+    "api/index.php": { "runtime": "vercel-php@0.9.0" },
+    "api/dashboard.php": { "runtime": "vercel-php@0.9.0" },
+    "api/pos.php": { "runtime": "vercel-php@0.9.0" },
+    "api/catalogo.php": { "runtime": "vercel-php@0.9.0" },
+    "api/clientes.php": { "runtime": "vercel-php@0.9.0" },
+    "api/historial.php": { "runtime": "vercel-php@0.9.0" },
+    "api/factura.php": { "runtime": "vercel-php@0.9.0" },
+    "api/backend/procesar_login.php": { "runtime": "vercel-php@0.9.0" },
+    "api/backend/logout.php": { "runtime": "vercel-php@0.9.0" },
+    "api/backend/api_productos.php": { "runtime": "vercel-php@0.9.0" }
   },
   "routes": [
     { "src": "/$", "dest": "/api/index.php" },
