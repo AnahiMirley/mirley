@@ -1,7 +1,13 @@
-<?php
-session_start();
-if (isset($_SESSION['usuario_activo'])) {
-    header('Location: dashboard.php');
-    exit;
+{
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.7.2"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.php"
+    }
+  ]
 }
-?>
